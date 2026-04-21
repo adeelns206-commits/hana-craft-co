@@ -1,0 +1,1668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Hana Craft Co. | Premium Handmade Crochet Bags from Pakistan</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --cream:#FAF6EF;--warm:#FDF9F3;--sand:#EFE0C8;--sand2:#F5ECD9;
+  --caramel:#C4894A;--caramel2:#A8703A;--brown:#4A2C1A;--brown2:#6B4226;
+  --text:#2C1A0E;--mid:#7A5235;--light:#B08B6E;
+  --green:#3D7A52;--wa:#25D366;--wa2:#1DAA55;
+  --red:#DC2626;--white:#FFFFFF;
+  --shadow:0 4px 30px rgba(74,44,26,.10);
+  --shadow2:0 16px 60px rgba(74,44,26,.18);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--sand2)}
+::-webkit-scrollbar-thumb{background:var(--caramel);border-radius:3px}
+
+/* ══════════════ NAV ══════════════ */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:900;
+  background:rgba(250,246,239,.96);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--sand);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 5%;height:68px;
+}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:700;color:var(--brown)}
+.nav-logo span{color:var(--caramel)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-size:.88rem;font-weight:500;color:var(--mid);letter-spacing:.3px;transition:.25s}
+.nav-links a:hover{color:var(--caramel)}
+.nav-btn{
+  background:var(--brown);color:#fff!important;
+  padding:.5rem 1.4rem;border-radius:50px;font-size:.85rem;
+  transition:.25s!important;
+}
+.nav-btn:hover{background:var(--caramel)!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:5px}
+.hamburger span{width:24px;height:2px;background:var(--brown);border-radius:2px;transition:.3s}
+.mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:var(--warm);border-bottom:1px solid var(--sand);padding:1.5rem 5%;z-index:899;flex-direction:column;gap:1rem}
+.mobile-menu a{font-size:1rem;color:var(--mid);font-weight:500;padding:.5rem 0;border-bottom:1px solid var(--sand)}
+.mobile-menu.open{display:flex}
+
+/* ══════════════ HERO ══════════════ */
+.hero{
+  min-height:100vh;padding:90px 5% 60px;
+  display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:5rem;
+  background:linear-gradient(135deg,var(--warm) 0%,var(--sand2) 100%);
+  position:relative;overflow:hidden;
+}
+.hero::after{
+  content:'';position:absolute;bottom:-80px;right:-80px;
+  width:400px;height:400px;
+  background:radial-gradient(circle,rgba(196,137,74,.12) 0%,transparent 70%);
+  border-radius:50%;pointer-events:none;
+}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:var(--sand);color:var(--brown2);
+  padding:.35rem 1rem;border-radius:50px;
+  font-size:.72rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;
+  margin-bottom:1.4rem;
+}
+.hero h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.6rem,4.5vw,4rem);line-height:1.12;
+  color:var(--brown);margin-bottom:1.4rem;
+}
+.hero h1 em{font-style:italic;color:var(--caramel)}
+.hero-desc{font-size:1rem;color:var(--mid);line-height:1.85;margin-bottom:2.2rem;max-width:480px}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.btn-dark{
+  background:var(--brown);color:#fff;
+  padding:.9rem 1.8rem;border-radius:50px;
+  font-size:.88rem;font-weight:500;
+  display:inline-flex;align-items:center;gap:.5rem;
+  transition:.3s;border:none;cursor:pointer;font-family:'Jost',sans-serif;
+}
+.btn-dark:hover{background:var(--caramel);transform:translateY(-2px);box-shadow:0 8px 25px rgba(196,137,74,.35)}
+.btn-wa{
+  background:var(--wa);color:#fff;
+  padding:.9rem 1.8rem;border-radius:50px;
+  font-size:.88rem;font-weight:500;
+  display:inline-flex;align-items:center;gap:.5rem;
+  transition:.3s;
+}
+.btn-wa:hover{background:var(--wa2);transform:translateY(-2px);box-shadow:0 8px 25px rgba(37,211,102,.35)}
+.hero-stats{display:flex;gap:2.5rem}
+.hstat .n{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--caramel)}
+.hstat .l{font-size:.72rem;color:var(--light);text-transform:uppercase;letter-spacing:.5px}
+.hero-img-wrap{position:relative}
+.hero-img-box{
+  width:100%;max-width:460px;aspect-ratio:3/4;
+  background:linear-gradient(135deg,var(--sand),var(--caramel));
+  border-radius:32px 32px 110px 32px;
+  overflow:hidden;box-shadow:var(--shadow2);
+  display:flex;align-items:center;justify-content:center;
+}
+.hero-img-box img{width:100%;height:100%;object-fit:cover}
+.hero-img-placeholder{text-align:center;color:#fff}
+.hero-img-placeholder .ic{font-size:5rem;display:block;margin-bottom:.8rem}
+
+/* ══════════════ SECTIONS ══════════════ */
+.sec-tag{display:block;font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--caramel);font-weight:600;margin-bottom:.6rem}
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.7rem);color:var(--brown);line-height:1.2}
+
+/* ══════════════ HOW IT WORKS ══════════════ */
+.hiw{padding:80px 5%;background:var(--white)}
+.hiw-head{text-align:center;margin-bottom:3.5rem}
+.hiw-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;
+  max-width:1100px;margin:0 auto;position:relative;
+}
+.hiw-grid::before{
+  content:'';position:absolute;top:34px;left:12%;right:12%;height:2px;
+  background:linear-gradient(90deg,var(--sand),var(--caramel),var(--sand));
+}
+.hiw-card{
+  background:var(--warm);border-radius:20px;padding:2rem 1.5rem;
+  text-align:center;box-shadow:var(--shadow);transition:.3s;position:relative;
+}
+.hiw-card:hover{transform:translateY(-6px);box-shadow:var(--shadow2)}
+.hiw-num{
+  width:50px;height:50px;background:var(--brown);color:#fff;
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;
+  margin:0 auto 1rem;position:relative;z-index:1;box-shadow:0 4px 15px rgba(74,44,26,.25);
+}
+.hiw-icon{font-size:2rem;margin-bottom:.8rem}
+.hiw-card h3{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--brown);margin-bottom:.4rem}
+.hiw-card p{font-size:.82rem;color:var(--light);line-height:1.6}
+
+/* ══════════════ PAYMENT TERMS BANNER ══════════════ */
+.payment-banner{
+  background:linear-gradient(135deg,var(--brown),var(--brown2));
+  color:#fff;padding:30px 5%;text-align:center;
+}
+.payment-banner h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;margin-bottom:.6rem}
+.payment-banner p{font-size:.9rem;color:rgba(255,255,255,.8);max-width:600px;margin:0 auto}
+.payment-pills{display:flex;gap:1rem;justify-content:center;margin-top:1.2rem;flex-wrap:wrap}
+.pill{
+  background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);
+  padding:.5rem 1.2rem;border-radius:50px;font-size:.82rem;font-weight:500;
+}
+.pill.gold{background:var(--caramel);border-color:var(--caramel)}
+
+/* ══════════════ SHOP ══════════════ */
+#shop{padding:80px 5%;background:var(--cream)}
+.shop-head{text-align:center;margin-bottom:3rem}
+.products-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));
+  gap:2rem;max-width:1200px;margin:0 auto;
+}
+.pcard{
+  background:#fff;border-radius:24px;overflow:hidden;
+  box-shadow:var(--shadow);transition:.3s;position:relative;
+  cursor:pointer;
+}
+.pcard:hover{transform:translateY(-8px);box-shadow:var(--shadow2)}
+.pcard-badge{
+  position:absolute;top:14px;left:14px;z-index:2;
+  padding:.3rem .8rem;border-radius:50px;
+  font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;
+}
+.badge-sale{background:var(--caramel);color:#fff}
+.badge-pop{background:var(--brown);color:#fff}
+.badge-new{background:var(--green);color:#fff}
+
+/* Product image gallery */
+.pimg-wrap{position:relative;overflow:hidden;aspect-ratio:1;background:var(--sand2)}
+.pimg-slides{display:flex;transition:transform .4s cubic-bezier(.4,0,.2,1)}
+.pimg-slide{
+  min-width:100%;aspect-ratio:1;
+  display:flex;align-items:center;justify-content:center;
+  font-size:5rem;background:var(--sand2);overflow:hidden;
+  position:relative;
+}
+.pimg-slide img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.pimg-slide .emoji-placeholder{position:relative;z-index:1}
+
+/* Color filter applied to slide via CSS filter — we use mix-blend or overlay */
+.pimg-slide .color-overlay{
+  position:absolute;inset:0;opacity:0;
+  mix-blend-mode:hue;transition:opacity .3s;pointer-events:none;z-index:2;
+}
+.svg-bag-wrap{
+  display:flex;align-items:center;justify-content:center;
+  width:100%;height:100%;position:absolute;inset:0;z-index:1;
+  pointer-events:none;
+}
+.svg-bag-wrap svg{filter:drop-shadow(0 8px 20px rgba(0,0,0,0.15));}
+
+.pimg-nav{
+  position:absolute;bottom:10px;left:50%;transform:translateX(-50%);
+  display:flex;gap:6px;z-index:3;
+}
+.pimg-dot{
+  width:7px;height:7px;border-radius:50%;
+  background:rgba(255,255,255,.5);border:none;cursor:pointer;transition:.2s;
+}
+.pimg-dot.active{background:#fff;width:18px;border-radius:4px}
+.pimg-arr{
+  position:absolute;top:50%;transform:translateY(-50%);
+  background:rgba(255,255,255,.85);border:none;cursor:pointer;
+  width:32px;height:32px;border-radius:50%;font-size:1rem;
+  display:flex;align-items:center;justify-content:center;
+  z-index:3;box-shadow:0 2px 8px rgba(0,0,0,.15);transition:.2s;
+}
+.pimg-arr:hover{background:#fff;box-shadow:0 4px 15px rgba(0,0,0,.2)}
+.pimg-arr.left{left:10px}
+.pimg-arr.right{right:10px}
+
+/* Color selector on product card */
+.pcolor-bar{
+  position:absolute;bottom:0;left:0;right:0;
+  background:linear-gradient(to top,rgba(255,255,255,.95),transparent);
+  padding:1rem .8rem .8rem;display:flex;gap:6px;flex-wrap:wrap;z-index:3;
+}
+.pcolor-swatch{
+  width:22px;height:22px;border-radius:50%;cursor:pointer;
+  border:2.5px solid transparent;transition:.2s;
+  box-shadow:0 1px 5px rgba(0,0,0,.2);
+}
+.pcolor-swatch.active{border-color:#fff;transform:scale(1.25);box-shadow:0 2px 8px rgba(0,0,0,.35)}
+.pcolor-swatch[data-color="white"]{border-color:#ddd!important}
+
+.pinfo{padding:1.4rem}
+.pinfo h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--brown);margin-bottom:.4rem}
+.pdesc{font-size:.8rem;color:var(--light);line-height:1.55;margin-bottom:1rem}
+.pprice{display:flex;align-items:center;gap:.7rem;margin-bottom:.5rem}
+.pprice .now{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:700;color:var(--brown)}
+.pprice .was{font-size:.85rem;color:var(--light);text-decoration:line-through}
+.pprice .off{background:#FEE2E2;color:var(--red);padding:.15rem .5rem;border-radius:50px;font-size:.68rem;font-weight:700}
+.pselected-color{font-size:.78rem;color:var(--mid);margin-bottom:1rem;min-height:1.1rem}
+.pselected-color span{font-weight:600;color:var(--brown)}
+.pbtn{
+  width:100%;background:var(--brown);color:#fff;border:none;
+  padding:.85rem;border-radius:14px;font-size:.88rem;font-weight:500;
+  cursor:pointer;transition:.3s;font-family:'Jost',sans-serif;
+  display:flex;align-items:center;justify-content:center;gap:.5rem;
+}
+.pbtn:hover{background:var(--wa);transform:translateY(-2px);box-shadow:0 8px 20px rgba(37,211,102,.3)}
+
+/* ══════════════ ORDER POPUP / MODAL ══════════════ */
+.overlay{
+  position:fixed;inset:0;background:rgba(0,0,0,.6);
+  z-index:2000;display:none;align-items:center;justify-content:center;
+  padding:20px;backdrop-filter:blur(4px);
+}
+.overlay.open{display:flex}
+.modal{
+  background:#fff;border-radius:24px;padding:2.5rem;
+  max-width:500px;width:100%;max-height:90vh;overflow-y:auto;
+  position:relative;box-shadow:0 30px 80px rgba(0,0,0,.25);
+}
+.modal-close{
+  position:absolute;top:16px;right:16px;
+  background:var(--sand2);border:none;width:36px;height:36px;
+  border-radius:50%;cursor:pointer;font-size:1.1rem;
+  display:flex;align-items:center;justify-content:center;transition:.2s;
+}
+.modal-close:hover{background:var(--sand);transform:rotate(90deg)}
+.modal h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--brown);margin-bottom:.5rem}
+.modal .sub{font-size:.85rem;color:var(--light);margin-bottom:1.5rem}
+
+/* Warning box */
+.warn-box{
+  background:#FEF2F2;border:1.5px solid #FECACA;border-radius:14px;
+  padding:1rem 1.2rem;margin-bottom:1.5rem;
+}
+.warn-box .warn-title{
+  display:flex;align-items:center;gap:.5rem;
+  font-weight:600;color:var(--red);font-size:.88rem;margin-bottom:.5rem;
+}
+.warn-box p{font-size:.82rem;color:#7F1D1D;line-height:1.6}
+.payment-terms-box{
+  background:var(--sand2);border-radius:14px;padding:1rem 1.2rem;margin-bottom:1.5rem;
+}
+.payment-terms-box h4{font-size:.88rem;font-weight:600;color:var(--brown);margin-bottom:.5rem}
+.payment-terms-box ul{list-style:none;font-size:.82rem;color:var(--mid);line-height:1.8}
+.payment-terms-box ul li::before{content:'✓  ';color:var(--green);font-weight:700}
+.modal-product-summary{
+  display:flex;align-items:center;gap:1rem;
+  background:var(--warm);border-radius:14px;padding:1rem;margin-bottom:1.5rem;
+}
+.modal-product-summary .thumb{
+  width:70px;height:70px;border-radius:12px;
+  background:var(--sand2);display:flex;align-items:center;justify-content:center;
+  font-size:2rem;overflow:hidden;flex-shrink:0;
+}
+.modal-product-summary .thumb img{width:100%;height:100%;object-fit:cover}
+.modal-product-summary .info h4{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--brown);margin-bottom:.2rem}
+.modal-product-summary .info p{font-size:.8rem;color:var(--mid)}
+.modal-product-summary .info .price{font-weight:700;color:var(--caramel);font-size:1rem;margin-top:.3rem}
+
+.form-group{margin-bottom:1.1rem}
+.form-group label{display:block;font-size:.82rem;font-weight:600;color:var(--brown);margin-bottom:.4rem}
+.form-group input,.form-group textarea,.form-group select{
+  width:100%;padding:.75rem 1rem;border:1.5px solid var(--sand);
+  border-radius:12px;font-size:.88rem;font-family:'Jost',sans-serif;
+  color:var(--text);background:var(--warm);transition:.2s;
+  outline:none;
+}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--caramel);box-shadow:0 0 0 3px rgba(196,137,74,.1)}
+.form-group textarea{resize:vertical;min-height:80px}
+.confirm-check{
+  display:flex;align-items:flex-start;gap:.7rem;
+  background:var(--sand2);border-radius:12px;padding:1rem;margin-bottom:1.2rem;
+}
+.confirm-check input[type=checkbox]{
+  margin-top:3px;accent-color:var(--caramel);
+  width:16px;height:16px;flex-shrink:0;
+}
+.confirm-check label{font-size:.8rem;color:var(--mid);line-height:1.5;cursor:pointer}
+.btn-confirm{
+  width:100%;background:var(--wa);color:#fff;border:none;
+  padding:1rem;border-radius:14px;font-size:.95rem;font-weight:600;
+  cursor:pointer;transition:.3s;font-family:'Jost',sans-serif;
+  display:flex;align-items:center;justify-content:center;gap:.6rem;
+}
+.btn-confirm:hover{background:var(--wa2);transform:translateY(-2px);box-shadow:0 10px 30px rgba(37,211,102,.35)}
+.btn-confirm:disabled{background:#9CA3AF;cursor:not-allowed;transform:none;box-shadow:none}
+
+/* ══════════════ COLORS SECTION ══════════════ */
+.colors-sec{padding:80px 5%;background:var(--brown)}
+.colors-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.colors-sec .sec-tag{color:var(--sand)}
+.colors-sec .sec-title{color:#fff;margin-bottom:1rem}
+.colors-sec p{color:rgba(255,255,255,.72);line-height:1.85;margin-bottom:2rem}
+.swatches{display:grid;grid-template-columns:repeat(5,1fr);gap:.9rem}
+.swatch{
+  aspect-ratio:1;border-radius:14px;cursor:pointer;
+  transition:.3s;box-shadow:0 4px 15px rgba(0,0,0,.2);
+  display:flex;flex-direction:column;align-items:center;justify-content:flex-end;
+  padding-bottom:.5rem;overflow:hidden;position:relative;
+}
+.swatch:hover{transform:scale(1.08)}
+.swatch span{font-size:.6rem;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.5);font-weight:600;text-transform:uppercase;letter-spacing:.3px}
+
+/* ══════════════ ABOUT ══════════════ */
+#about{padding:80px 5%;background:var(--white)}
+.about-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.about-img{
+  background:linear-gradient(135deg,var(--sand),var(--caramel));
+  border-radius:32px 32px 32px 110px;aspect-ratio:4/5;
+  display:flex;align-items:center;justify-content:center;font-size:5rem;
+  box-shadow:var(--shadow2);overflow:hidden;
+}
+.about-img img{width:100%;height:100%;object-fit:cover;border-radius:inherit}
+.about-content .sec-title{margin-bottom:1.3rem}
+.about-content p{color:var(--mid);line-height:1.85;margin-bottom:1.2rem;font-size:.95rem}
+.about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}
+.astat{background:var(--warm);padding:1.3rem;border-radius:16px;text-align:center;box-shadow:var(--shadow)}
+.astat .n{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:700;color:var(--caramel)}
+.astat .l{font-size:.72rem;color:var(--light);margin-top:.2rem}
+
+/* ══════════════ TESTIMONIALS ══════════════ */
+.testi{padding:80px 5%;background:var(--cream)}
+.testi-head{text-align:center;margin-bottom:3rem}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1100px;margin:0 auto}
+.tcard{background:#fff;padding:2rem;border-radius:20px;box-shadow:var(--shadow);position:relative}
+.tcard::before{
+  content:'"';font-family:'Cormorant Garamond',serif;font-size:5rem;
+  color:var(--sand);position:absolute;top:-12px;left:16px;line-height:1;
+}
+.stars{color:#F59E0B;font-size:.9rem;margin-bottom:.8rem}
+.tcard p{color:var(--mid);font-size:.85rem;line-height:1.75;margin-bottom:1.3rem;position:relative;z-index:1}
+.tauthor{display:flex;align-items:center;gap:.7rem}
+.tavatar{width:40px;height:40px;border-radius:50%;background:var(--sand2);display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+.tname{font-weight:600;font-size:.85rem;color:var(--brown)}
+.tcity{font-size:.75rem;color:var(--light)}
+
+/* ══════════════ FAQ ══════════════ */
+.faq{padding:80px 5%;background:var(--white)}
+.faq-head{text-align:center;margin-bottom:3rem}
+.faq-list{max-width:750px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--sand);overflow:hidden}
+.faq-q{
+  width:100%;background:none;border:none;padding:1.2rem 0;
+  display:flex;justify-content:space-between;align-items:center;
+  cursor:pointer;font-family:'Jost',sans-serif;font-size:.95rem;
+  font-weight:500;color:var(--brown);text-align:left;
+}
+.faq-q .arr{font-size:.9rem;transition:.3s;color:var(--caramel)}
+.faq-item.open .faq-q .arr{transform:rotate(180deg)}
+.faq-a{
+  font-size:.88rem;color:var(--mid);line-height:1.75;
+  max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s;
+}
+.faq-item.open .faq-a{max-height:200px;padding-bottom:1.2rem}
+
+/* ══════════════ CONTACT ══════════════ */
+#contact{padding:80px 5%;background:var(--cream)}
+.contact-inner{max-width:720px;margin:0 auto;text-align:center}
+.contact-inner .sec-title{margin-bottom:.8rem}
+.contact-inner>p{color:var(--mid);font-size:.95rem;line-height:1.8;margin-bottom:2.5rem}
+.contact-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-bottom:2.5rem}
+.ccard{
+  background:#fff;padding:1.8rem 1.2rem;border-radius:20px;
+  box-shadow:var(--shadow);transition:.3s;
+}
+.ccard:hover{transform:translateY(-5px);box-shadow:var(--shadow2)}
+.ccard .icon{font-size:2.2rem;margin-bottom:.8rem}
+.ccard h4{font-family:'Cormorant Garamond',serif;color:var(--brown);margin-bottom:.3rem;font-size:1.05rem}
+.ccard p{font-size:.78rem;color:var(--light)}
+.big-wa{
+  background:var(--wa);color:#fff;
+  padding:1.1rem 2.8rem;border-radius:50px;
+  font-size:1rem;font-weight:600;
+  display:inline-flex;align-items:center;gap:.7rem;
+  transition:.3s;box-shadow:0 10px 30px rgba(37,211,102,.3);
+}
+.big-wa:hover{background:var(--wa2);transform:translateY(-3px);box-shadow:0 16px 40px rgba(37,211,102,.4)}
+
+/* ══════════════ FOOTER ══════════════ */
+footer{background:var(--brown);color:rgba(255,255,255,.75);padding:50px 5% 28px}
+.ft-inner{max-width:1100px;margin:0 auto}
+.ft-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:4rem;margin-bottom:2.5rem}
+.ft-logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:#fff;margin-bottom:.8rem}
+.ft-logo span{color:var(--caramel)}
+.ft-brand p{font-size:.83rem;line-height:1.8;color:rgba(255,255,255,.6);margin-bottom:1.3rem}
+.socials{display:flex;gap:.8rem}
+.soc{
+  width:36px;height:36px;background:rgba(255,255,255,.1);
+  border-radius:10px;display:flex;align-items:center;justify-content:center;
+  font-size:1rem;transition:.25s;
+}
+.soc:hover{background:var(--caramel)}
+.ft-col h5{color:#fff;font-size:.82rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:1rem}
+.ft-col ul{list-style:none}
+.ft-col ul li{margin-bottom:.55rem}
+.ft-col ul li a{font-size:.83rem;color:rgba(255,255,255,.55);transition:.2s}
+.ft-col ul li a:hover{color:var(--caramel)}
+.ft-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:1.3rem;display:flex;justify-content:space-between;font-size:.78rem;color:rgba(255,255,255,.35)}
+
+/* ══════════════ WA FLOAT ══════════════ */
+.wa-float{
+  position:fixed;bottom:28px;right:28px;z-index:800;
+  background:var(--wa);width:58px;height:58px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-size:1.7rem;
+  box-shadow:0 8px 25px rgba(37,211,102,.45);
+  animation:wapulse 2.5s infinite;
+}
+.wa-float:hover{transform:scale(1.12)}
+@keyframes wapulse{0%,100%{box-shadow:0 8px 25px rgba(37,211,102,.45)}50%{box-shadow:0 8px 45px rgba(37,211,102,.75)}}
+
+/* ══════════════ ADMIN PANEL ══════════════ */
+#admin-panel{
+  display:none;position:fixed;inset:0;z-index:5000;
+  background:var(--cream);overflow-y:auto;
+}
+#admin-panel.open{display:block}
+.admin-nav{
+  background:var(--brown);padding:0 5%;height:60px;
+  display:flex;align-items:center;justify-content:space-between;
+  position:sticky;top:0;z-index:10;
+}
+.admin-nav h1{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:#fff}
+.admin-nav h1 span{color:var(--caramel)}
+.admin-close{
+  background:rgba(255,255,255,.15);color:#fff;border:none;
+  padding:.5rem 1.2rem;border-radius:50px;cursor:pointer;font-size:.85rem;
+  font-family:'Jost',sans-serif;transition:.2s;
+}
+.admin-close:hover{background:var(--red);color:#fff}
+.admin-body{max-width:1100px;margin:0 auto;padding:2.5rem 5%}
+.admin-tabs{display:flex;gap:.5rem;margin-bottom:2.5rem;border-bottom:2px solid var(--sand)}
+.atab{
+  background:none;border:none;padding:.75rem 1.5rem;
+  font-family:'Jost',sans-serif;font-size:.88rem;font-weight:500;
+  color:var(--mid);cursor:pointer;border-bottom:2px solid transparent;
+  margin-bottom:-2px;transition:.2s;
+}
+.atab.active{color:var(--caramel);border-bottom-color:var(--caramel)}
+.admin-section{display:none}
+.admin-section.active{display:block}
+.admin-section h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--brown);margin-bottom:1.5rem}
+.product-list{display:flex;flex-direction:column;gap:1rem}
+.product-row{
+  background:#fff;border-radius:16px;padding:1.2rem 1.5rem;
+  display:flex;align-items:center;gap:1.5rem;
+  box-shadow:var(--shadow);
+}
+.product-row .pr-icon{
+  width:60px;height:60px;background:var(--sand2);
+  border-radius:12px;display:flex;align-items:center;justify-content:center;
+  font-size:1.8rem;flex-shrink:0;overflow:hidden;
+}
+.product-row .pr-icon img{width:100%;height:100%;object-fit:cover;border-radius:12px}
+.product-row .pr-info{flex:1}
+.product-row .pr-info h4{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--brown);margin-bottom:.2rem}
+.product-row .pr-info p{font-size:.78rem;color:var(--light)}
+.product-row .pr-price{font-weight:700;color:var(--caramel);font-size:1rem;white-space:nowrap}
+.pr-actions{display:flex;gap:.6rem}
+.pr-btn{
+  padding:.45rem .9rem;border-radius:8px;border:none;
+  cursor:pointer;font-size:.78rem;font-weight:500;font-family:'Jost',sans-serif;transition:.2s;
+}
+.pr-btn.edit{background:var(--sand2);color:var(--brown)}
+.pr-btn.edit:hover{background:var(--sand)}
+.pr-btn.del{background:#FEE2E2;color:var(--red)}
+.pr-btn.del:hover{background:#FECACA}
+.add-product-form{
+  background:#fff;border-radius:20px;padding:2rem;
+  box-shadow:var(--shadow);margin-top:1.5rem;
+}
+.add-product-form h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--brown);margin-bottom:1.5rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.admin-fg{margin-bottom:1rem}
+.admin-fg label{display:block;font-size:.8rem;font-weight:600;color:var(--brown);margin-bottom:.35rem}
+.admin-fg input,.admin-fg textarea,.admin-fg select{
+  width:100%;padding:.7rem 1rem;border:1.5px solid var(--sand);
+  border-radius:10px;font-size:.85rem;font-family:'Jost',sans-serif;
+  color:var(--text);background:var(--warm);outline:none;transition:.2s;
+}
+.admin-fg input:focus,.admin-fg textarea:focus{border-color:var(--caramel)}
+.admin-fg textarea{min-height:70px;resize:vertical}
+.color-input-row{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin-top:.3rem}
+.color-pill{
+  display:flex;align-items:center;gap:.3rem;
+  background:var(--sand2);padding:.25rem .6rem .25rem .4rem;
+  border-radius:50px;font-size:.75rem;color:var(--brown);
+}
+.color-pill .dot{width:14px;height:14px;border-radius:50%;border:1px solid rgba(0,0,0,.1)}
+.color-pill .rm{
+  background:none;border:none;cursor:pointer;color:var(--light);
+  font-size:.9rem;line-height:1;padding:0 2px;
+}
+.color-pill .rm:hover{color:var(--red)}
+.color-add-row{display:flex;gap:.5rem;margin-top:.5rem;align-items:center}
+.color-add-row input[type=color]{width:36px;height:32px;padding:2px;border:1.5px solid var(--sand);border-radius:8px;cursor:pointer}
+.color-add-row input[type=text]{flex:1;padding:.5rem .8rem;border:1.5px solid var(--sand);border-radius:8px;font-size:.8rem;font-family:'Jost',sans-serif}
+.color-add-row button{padding:.5rem .9rem;background:var(--brown);color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:.8rem;font-family:'Jost',sans-serif;transition:.2s}
+.color-add-row button:hover{background:var(--caramel)}
+.btn-save{
+  background:var(--brown);color:#fff;border:none;
+  padding:.85rem 2rem;border-radius:12px;
+  font-size:.9rem;font-weight:600;cursor:pointer;
+  font-family:'Jost',sans-serif;transition:.2s;
+}
+.btn-save:hover{background:var(--caramel)}
+.btn-cancel-form{
+  background:var(--sand2);color:var(--brown);border:none;
+  padding:.85rem 2rem;border-radius:12px;
+  font-size:.9rem;font-weight:500;cursor:pointer;
+  font-family:'Jost',sans-serif;transition:.2s;margin-left:.7rem;
+}
+.toast{
+  position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(80px);
+  background:var(--brown);color:#fff;padding:.8rem 2rem;border-radius:50px;
+  font-size:.88rem;z-index:9999;opacity:0;transition:.35s;pointer-events:none;
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* Settings tab */
+.settings-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.settings-card{background:#fff;border-radius:16px;padding:1.5rem;box-shadow:var(--shadow)}
+.settings-card h4{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--brown);margin-bottom:1rem}
+
+/* ══════════════ RESPONSIVE ══════════════ */
+@media(max-width:960px){
+  .hero{grid-template-columns:1fr;text-align:center;gap:3rem}
+  .hero-desc{margin:0 auto 2rem}
+  .hero-btns{justify-content:center}
+  .hero-stats{justify-content:center}
+  .hero-img-wrap{order:-1;display:flex;justify-content:center}
+  .hero-img-box{max-width:300px}
+  .hiw-grid{grid-template-columns:repeat(2,1fr)}
+  .hiw-grid::before{display:none}
+  .colors-inner{grid-template-columns:1fr;gap:3rem}
+  .about-inner{grid-template-columns:1fr}
+  .testi-grid{grid-template-columns:1fr}
+  .contact-cards{grid-template-columns:1fr}
+  .ft-top{grid-template-columns:1fr;gap:2rem}
+  .admin-body{padding:1.5rem 4%}
+  .settings-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .hiw-grid{grid-template-columns:1fr}
+  .products-grid{grid-template-columns:1fr}
+  .swatches{grid-template-columns:repeat(3,1fr)}
+  .about-stats{grid-template-columns:repeat(3,1fr)}
+  .ft-bottom{flex-direction:column;gap:.4rem;text-align:center}
+  .product-row{flex-wrap:wrap}
+}
+
+/* ══════════════ ANIMATIONS ══════════════ */
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+.hero-content>*{animation:fadeUp .7s ease both}
+.hero-content>*:nth-child(1){animation-delay:.1s}
+.hero-content>*:nth-child(2){animation-delay:.2s}
+.hero-content>*:nth-child(3){animation-delay:.3s}
+.hero-content>*:nth-child(4){animation-delay:.4s}
+.hero-content>*:nth-child(5){animation-delay:.5s}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease}
+.reveal.vis{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <a href="#" class="nav-logo">Hana <span>Craft</span> Co.</a>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#shop">Shop</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#" onclick="openAdmin(event)" class="nav-btn">Admin</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#" onclick="closeMobileMenu()">Home</a>
+  <a href="#shop" onclick="closeMobileMenu()">Shop</a>
+  <a href="#about" onclick="closeMobileMenu()">About</a>
+  <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+  <a href="#" onclick="openAdmin(event);closeMobileMenu()">Admin Panel</a>
+</div>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-tag">✦ Handcrafted in Pakistan · Est. 2024</div>
+    <h1>The Bag Made<br/><em>Only For You</em></h1>
+    <p class="hero-desc">Skip the shelves. Choose your color, place your order — we craft it fresh, just for you. No two pieces alike. Pure crochet artistry, delivered across Pakistan.</p>
+    <div class="hero-btns">
+      <a href="#shop" class="btn-dark">✦ Browse Collection</a>
+      <a href="#" onclick="openWA('Hi! I want to order a custom bag from Hana Craft Co.')" class="btn-wa">💬 Order on WhatsApp</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat"><div class="n">200+</div><div class="l">Happy Customers</div></div>
+      <div class="hstat"><div class="n" id="hero-styles">4</div><div class="l">Bag Styles</div></div>
+      <div class="hstat"><div class="n">10+</div><div class="l">Colors</div></div>
+    </div>
+  </div>
+  <div class="hero-img-wrap">
+    <div class="hero-img-box">
+      <div class="hero-img-placeholder"><span class="ic">👜</span><p style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#fff">Hana Craft Co.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ HOW IT WORKS ══ -->
+<section class="hiw reveal">
+  <div class="hiw-head">
+    <span class="sec-tag">Simple Process</span>
+    <h2 class="sec-title">How It Works</h2>
+  </div>
+  <div class="hiw-grid">
+    <div class="hiw-card"><div class="hiw-num">1</div><div class="hiw-icon">🎨</div><h3>Choose Your Style</h3><p>Pick from our handcrafted bag designs — tote, bucket, clutch, shoulder & more.</p></div>
+    <div class="hiw-card"><div class="hiw-num">2</div><div class="hiw-icon">🌈</div><h3>Select Your Colors</h3><p>Mix and match from 10+ premium yarn colors. Make it uniquely yours.</p></div>
+    <div class="hiw-card"><div class="hiw-num">3</div><div class="hiw-icon">💬</div><h3>Order via WhatsApp</h3><p>Send us a message — confirm your order & pay 30% advance to start crafting.</p></div>
+    <div class="hiw-card"><div class="hiw-num">4</div><div class="hiw-icon">📦</div><h3>Receive in 10 Days</h3><p>Your custom bag arrives fresh at your door. Pay remaining 70% on delivery.</p></div>
+  </div>
+</section>
+
+<!-- ══ PAYMENT TERMS BANNER ══ -->
+<div class="payment-banner reveal">
+  <h3>💳 Payment Terms</h3>
+  <p>Easy & secure payment structure for your custom bag order</p>
+  <div class="payment-pills">
+    <div class="pill gold">30% Advance to Confirm Order</div>
+    <div class="pill">+</div>
+    <div class="pill gold">70% Cash on Delivery</div>
+    <div class="pill">⚠️ Advance is non-refundable on cancellation</div>
+  </div>
+</div>
+
+<!-- ══ SHOP ══ -->
+<section id="shop">
+  <div class="shop-head reveal">
+    <span class="sec-tag">Our Collection</span>
+    <h2 class="sec-title">Choose Your Bag</h2>
+    <p style="color:var(--mid);font-size:.9rem;margin-top:.5rem">Click any product to customize & order</p>
+  </div>
+  <div class="products-grid" id="productsGrid">
+    <!-- Rendered by JS -->
+  </div>
+</section>
+
+<!-- ══ ORDER MODAL ══ -->
+<div class="overlay" id="orderOverlay">
+  <div class="modal" id="orderModal">
+    <button class="modal-close" onclick="closeOrderModal()">✕</button>
+    <h2>Customize & Order</h2>
+    <p class="sub">Fill in your details — we'll confirm on WhatsApp</p>
+
+    <!-- Product Summary -->
+    <div class="modal-product-summary" id="modalProductSummary"></div>
+
+    <!-- Warning Box -->
+    <div class="warn-box">
+      <div class="warn-title">⚠️ Important — Please Read Before Ordering</div>
+      <p>Once your order is confirmed and 30% advance payment is made, <strong>the advance amount is non-refundable</strong> if you cancel the order. Your bag will be crafted fresh specifically for you.</p>
+    </div>
+
+    <!-- Payment Terms -->
+    <div class="payment-terms-box">
+      <h4>💳 Payment Structure</h4>
+      <ul>
+        <li>30% advance payment required to start crafting</li>
+        <li>70% cash on delivery when you receive your bag</li>
+        <li>Delivery across Pakistan in approximately 10 days</li>
+        <li>Advance is non-refundable upon order cancellation</li>
+      </ul>
+    </div>
+
+    <!-- Color Selection in Modal -->
+    <div id="modalColorSection" style="margin-bottom:1.2rem"></div>
+
+    <!-- Form -->
+    <div class="form-group">
+      <label>Your Full Name *</label>
+      <input type="text" id="oName" placeholder="e.g. Ayesha Khan"/>
+    </div>
+    <div class="form-group">
+      <label>WhatsApp Number *</label>
+      <input type="tel" id="oPhone" placeholder="e.g. 03001234567"/>
+    </div>
+    <div class="form-group">
+      <label>City / Address</label>
+      <input type="text" id="oCity" placeholder="e.g. Karachi, DHA Phase 5"/>
+    </div>
+    <div class="form-group">
+      <label>Special Instructions (optional)</label>
+      <textarea id="oNote" placeholder="Any special requests, size preference, etc."></textarea>
+    </div>
+
+    <!-- Confirmation Checkbox -->
+    <div class="confirm-check">
+      <input type="checkbox" id="oConfirm" onchange="toggleConfirmBtn()"/>
+      <label for="oConfirm">I have read and understood the payment terms. I know that the 30% advance payment is <strong>non-refundable</strong> if I cancel my order. I confirm I want to place this order.</label>
+    </div>
+
+    <button class="btn-confirm" id="confirmBtn" disabled onclick="submitOrder()">
+      ✅ Confirm & Order on WhatsApp
+    </button>
+  </div>
+</div>
+
+<!-- ══ COLORS SECTION ══ -->
+<section class="colors-sec reveal">
+  <div class="colors-inner">
+    <div>
+      <span class="sec-tag">You Design It</span>
+      <h2 class="sec-title">Pick Any Color<br/>You Love</h2>
+      <p>We carry 10+ premium yarn colors. From soft neutrals to bold pops — every bag is crafted fresh after your order. Ask us for even more options on WhatsApp!</p>
+      <a href="#" onclick="openWA('Hi! I want to see all available yarn colors for my custom bag.')" class="btn-wa">💬 Ask for More Colors</a>
+    </div>
+    <div class="swatches" id="colorSwatches">
+      <!-- Rendered by JS from settings -->
+    </div>
+  </div>
+</section>
+
+<!-- ══ ABOUT ══ -->
+<section id="about">
+  <div class="about-inner">
+    <div class="about-img reveal">🧶</div>
+    <div class="about-content reveal">
+      <span class="sec-tag">Our Story</span>
+      <h2 class="sec-title">Born from Passion.<br/>Built by Hand.</h2>
+      <p>Every bag at Hana Craft Co. is handstitched by skilled craftswomen in Pakistan. We use premium crochet yarn and traditional techniques to create bags that last a lifetime — and look stunning doing it.</p>
+      <p>We started with a simple belief: every woman deserves a bag that is truly hers. Not mass-produced, not off a shelf — but made fresh, with love, in her chosen colors.</p>
+      <div class="about-stats">
+        <div class="astat"><div class="n">200+</div><div class="l">Customers</div></div>
+        <div class="astat"><div class="n" id="about-styles">4</div><div class="l">Styles</div></div>
+        <div class="astat"><div class="n">10+</div><div class="l">Colors</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIALS ══ -->
+<section class="testi">
+  <div class="testi-head reveal">
+    <span class="sec-tag">Customer Love</span>
+    <h2 class="sec-title">What Our Customers Say</h2>
+  </div>
+  <div class="testi-grid">
+    <div class="tcard reveal"><div class="stars">★★★★★</div><p>Absolutely love my camel tote bag! The quality is amazing and it arrived exactly as I ordered. Will definitely order again and again!</p><div class="tauthor"><div class="tavatar">👩</div><div><div class="tname">Ayesha K.</div><div class="tcity">Karachi</div></div></div></div>
+    <div class="tcard reveal"><div class="stars">★★★★★</div><p>Ordered a pink clutch for my sister's wedding. Everyone kept asking where she got it! Beautiful craftsmanship, fast delivery.</p><div class="tauthor"><div class="tavatar">👩</div><div><div class="tname">Sana M.</div><div class="tcity">Lahore</div></div></div></div>
+    <div class="tcard reveal"><div class="stars">★★★★★</div><p>The bucket bag in green is my new favorite! So unique and well-made. The WhatsApp ordering process was super easy and smooth.</p><div class="tauthor"><div class="tavatar">👩</div><div><div class="tname">Fatima R.</div><div class="tcity">Islamabad</div></div></div></div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section class="faq">
+  <div class="faq-head reveal">
+    <span class="sec-tag">Questions & Answers</span>
+    <h2 class="sec-title">Frequently Asked Questions</h2>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How do I place an order? <span class="arr">▼</span></button><div class="faq-a">Simply click "Order on WhatsApp" on any product, fill in your details, and confirm. We'll contact you on WhatsApp to finalize everything.</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What is the payment process? <span class="arr">▼</span></button><div class="faq-a">We require 30% advance payment to begin crafting your bag. The remaining 70% is paid cash on delivery when your bag arrives.</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can I cancel my order? <span class="arr">▼</span></button><div class="faq-a">You may cancel before crafting begins. However, once 30% advance is paid and crafting starts, the advance amount is non-refundable as materials have already been used.</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How long does delivery take? <span class="arr">▼</span></button><div class="faq-a">Each bag is handcrafted fresh for you. Delivery takes approximately 10 days after order confirmation. We deliver across all of Pakistan.</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can I choose custom colors? <span class="arr">▼</span></button><div class="faq-a">Absolutely! We have 10+ yarn colors available. You can even mix colors on a single bag. Contact us on WhatsApp to discuss your dream color combination.</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you ship outside Pakistan? <span class="arr">▼</span></button><div class="faq-a">Currently we deliver within Pakistan only. International shipping is coming soon — follow us on Instagram for updates!</div></div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section id="contact">
+  <div class="contact-inner">
+    <span class="sec-tag">Get In Touch</span>
+    <h2 class="sec-title reveal">Ready to Order?</h2>
+    <p>Place your order on WhatsApp — send us a message with your bag style and color choice, and we'll handle everything from there!</p>
+    <div class="contact-cards reveal">
+      <a href="#" onclick="openWA('Hi! I want to order a bag.')" class="ccard"><div class="icon">💬</div><h4>WhatsApp</h4><p id="contactWANum">+92 300 0000000</p></a>
+      <a href="https://instagram.com/hanacraftco" target="_blank" class="ccard"><div class="icon">📸</div><h4>Instagram</h4><p>@hanacraftco</p></a>
+      <a href="https://tiktok.com/@hanacraftco" target="_blank" class="ccard"><div class="icon">🎵</div><h4>TikTok</h4><p>@hanacraftco</p></a>
+    </div>
+    <a href="#" onclick="openWA('Hi! I want to order a custom bag from Hana Craft Co. Please help me!')" class="big-wa">💬 Order Now on WhatsApp</a>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="ft-inner">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <div class="ft-logo">Hana <span>Craft</span> Co.</div>
+        <p>Handcrafted crochet bags made with love by skilled craftswomen in Pakistan. Every bag is unique, crafted fresh just for you.</p>
+        <div class="socials">
+          <a href="https://instagram.com/hanacraftco" class="soc" target="_blank">📸</a>
+          <a href="https://youtube.com/@hanacraftco" class="soc" target="_blank">▶️</a>
+          <a href="https://tiktok.com/@hanacraftco" class="soc" target="_blank">🎵</a>
+          <a href="#" onclick="openWA('Hi!')" class="soc">💬</a>
+        </div>
+      </div>
+      <div class="ft-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h5>Our Bags</h5>
+        <ul id="footerBagLinks"></ul>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <span>© 2025 Hana Craft Co. · Handcrafted in Pakistan</span>
+      <span>Made with ❤️ for every woman</span>
+    </div>
+  </div>
+</footer>
+
+<!-- WA Float -->
+<a href="#" onclick="openWA('Hi! I want to order a bag from Hana Craft Co.')" class="wa-float">💬</a>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<!-- ══ ADMIN PANEL ══ -->
+<div id="admin-panel">
+  <div class="admin-nav">
+    <h1>Hana <span>Craft</span> Admin</h1>
+    <button class="admin-close" onclick="closeAdmin()">✕ Close Admin</button>
+  </div>
+  <div class="admin-body">
+    <div class="admin-tabs">
+      <button class="atab active" onclick="switchTab('products',this)">📦 Products</button>
+      <button class="atab" onclick="switchTab('settings',this)">⚙️ Settings</button>
+    </div>
+
+    <!-- PRODUCTS TAB -->
+    <div class="admin-section active" id="tab-products">
+      <h2>Manage Products</h2>
+      <div class="product-list" id="adminProductList"></div>
+      <div id="productFormWrap" style="display:none"></div>
+      <button class="btn-save" style="margin-top:1.2rem" onclick="showAddForm()">+ Add New Product</button>
+    </div>
+
+    <!-- SETTINGS TAB -->
+    <div class="admin-section" id="tab-settings">
+      <h2>Store Settings</h2>
+      <div class="settings-grid">
+        <div class="settings-card">
+          <h4>📱 WhatsApp Number</h4>
+          <div class="admin-fg" style="margin-top:.8rem">
+            <label>WhatsApp Number (with country code)</label>
+            <input type="text" id="settingWA" placeholder="e.g. 923001234567"/>
+          </div>
+          <button class="btn-save" onclick="saveSettings()">Save Settings</button>
+        </div>
+        <div class="settings-card">
+          <h4>🎨 Available Colors</h4>
+          <p style="font-size:.8rem;color:var(--light);margin-bottom:1rem">These appear in the colors showcase section</p>
+          <div id="globalColorsList"></div>
+          <div class="color-add-row" style="margin-top:.8rem">
+            <input type="color" id="gcColor" value="#C4894A"/>
+            <input type="text" id="gcName" placeholder="Color name"/>
+            <button onclick="addGlobalColor()">+ Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════════════
+// DATA STORE
+// ══════════════════════════════════════════
+const STORE_KEY = 'hanaCraftStore';
+
+const defaultProducts = [
+  {
+    id:1, name:'Crochet Tote Bag',
+    desc:'Spacious & stylish. Perfect for daily use. Holds all your essentials with elegance.',
+    price:2250, oldPrice:2500, badge:'sale', badgeText:'10% OFF',
+    emoji:'👜',
+    images:['','',''], // front, back, side — user will add URLs
+    colors:[
+      {name:'Camel',hex:'#C8955A'},
+      {name:'Beige',hex:'#E8D5B7'},
+      {name:'Brown',hex:'#7A5444'},
+      {name:'White',hex:'#FFFFFF'},
+      {name:'Pink',hex:'#F9A8D4'},
+    ]
+  },
+  {
+    id:2, name:'Crochet Bucket Bag',
+    desc:'Trendy bucket style with drawstring top. Our most loved design!',
+    price:1980, oldPrice:2200, badge:'popular', badgeText:'POPULAR',
+    emoji:'🪣',
+    images:['','',''],
+    colors:[
+      {name:'Camel',hex:'#C8955A'},
+      {name:'Beige',hex:'#E8D5B7'},
+      {name:'Brown',hex:'#7A5444'},
+      {name:'Green',hex:'#4A7C59'},
+      {name:'Grey',hex:'#6B7280'},
+    ]
+  },
+  {
+    id:3, name:'Crochet Clutch',
+    desc:'Compact & chic. Perfect for evenings out or special occasions.',
+    price:1200, oldPrice:null, badge:'', badgeText:'',
+    emoji:'👛',
+    images:['','',''],
+    colors:[
+      {name:'Camel',hex:'#C8955A'},
+      {name:'Pink',hex:'#F9A8D4'},
+      {name:'Beige',hex:'#E8D5B7'},
+      {name:'Brown',hex:'#7A5444'},
+    ]
+  },
+  {
+    id:4, name:'Shoulder Bag',
+    desc:'Adjustable strap, modern style. Goes from casual to classy effortlessly.',
+    price:2550, oldPrice:3000, badge:'new', badgeText:'NEW',
+    emoji:'👝',
+    images:['','',''],
+    colors:[
+      {name:'Camel',hex:'#C8955A'},
+      {name:'Beige',hex:'#E8D5B7'},
+      {name:'Brown',hex:'#7A5444'},
+      {name:'Coral',hex:'#F87171'},
+      {name:'Blue',hex:'#60A5FA'},
+    ]
+  }
+];
+
+const defaultSettings = {
+  whatsapp:'923001234567',
+  globalColors:[
+    {hex:'#C8955A',name:'Camel'},
+    {hex:'#E8D5B7',name:'Beige'},
+    {hex:'#7A5444',name:'Brown'},
+    {hex:'#F9A8D4',name:'Pink'},
+    {hex:'#FFFFFF',name:'White'},
+    {hex:'#4A7C59',name:'Green'},
+    {hex:'#6B7280',name:'Grey'},
+    {hex:'#60A5FA',name:'Blue'},
+    {hex:'#F87171',name:'Coral'},
+    {hex:'#2C1810',name:'Black'},
+  ]
+};
+
+function loadStore(){
+  try{
+    const s=localStorage.getItem(STORE_KEY);
+    if(s) return JSON.parse(s);
+  }catch(e){}
+  return {products:JSON.parse(JSON.stringify(defaultProducts)),settings:JSON.parse(JSON.stringify(defaultSettings))};
+}
+function saveStore(store){
+  try{localStorage.setItem(STORE_KEY,JSON.stringify(store));}catch(e){}
+}
+
+let store = loadStore();
+
+// ══════════════════════════════════════════
+// RENDER PRODUCTS
+// ══════════════════════════════════════════
+// Per-card state
+const cardState = {};
+
+function renderProducts(){
+  const grid = document.getElementById('productsGrid');
+  grid.innerHTML='';
+  store.products.forEach(p=>{
+    if(!cardState[p.id]) cardState[p.id]={slideIdx:0, colorIndices: p.colors.map((_,i)=>i===0?true:false), selectedColors: p.colors.length>0?[p.colors[0]]:[]} ;
+    grid.appendChild(buildCard(p));
+  });
+  updateFooterLinks();
+  updateHeroStats();
+}
+
+// SVG bag shapes per product type
+function getBagSVG(emoji, hex){
+  const light = lightenHex(hex, 0.25);
+  const dark  = darkenHex(hex, 0.18);
+  // Pick shape by emoji
+  if(emoji==='👜'||emoji==='🛍️'){ // Tote
+    return `<svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg" width="140" height="154">
+      <!-- handles -->
+      <path d="M70 70 Q65 30 85 25 Q100 20 115 25 Q135 30 130 70" fill="none" stroke="${dark}" stroke-width="8" stroke-linecap="round"/>
+      <!-- body -->
+      <rect x="40" y="70" width="120" height="130" rx="14" fill="${hex}"/>
+      <rect x="40" y="70" width="120" height="30" rx="14" fill="${dark}"/>
+      <!-- crochet pattern -->
+      <g opacity="0.18" fill="${dark}">
+        ${[0,1,2,3,4].map(r=>[0,1,2,3,4,5].map(c=>`<circle cx="${55+c*18}" cy="${115+r*18}" r="4"/>`).join('')).join('')}
+      </g>
+      <!-- clasp -->
+      <rect x="88" y="82" width="24" height="14" rx="7" fill="${light}" stroke="${dark}" stroke-width="1.5"/>
+    </svg>`;
+  } else if(emoji==='🪣'){ // Bucket
+    return `<svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg" width="140" height="154">
+      <!-- drawstring -->
+      <path d="M75 75 Q100 65 125 75" fill="none" stroke="${dark}" stroke-width="5" stroke-linecap="round"/>
+      <line x1="100" y1="65" x2="100" y2="50" stroke="${dark}" stroke-width="4"/>
+      <circle cx="100" cy="46" r="7" fill="${dark}"/>
+      <!-- body -->
+      <path d="M55 80 L45 195 Q45 205 100 205 Q155 205 155 195 L145 80 Z" fill="${hex}"/>
+      <path d="M55 80 L145 80 Q148 88 100 90 Q52 88 55 80Z" fill="${dark}"/>
+      <!-- crochet pattern -->
+      <g opacity="0.18" fill="${dark}">
+        ${[0,1,2,3,4].map(r=>[0,1,2,3].map(c=>`<circle cx="${68+c*21}" cy="${110+r*20}" r="4"/>`).join('')).join('')}
+      </g>
+    </svg>`;
+  } else if(emoji==='👛'){ // Clutch
+    return `<svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg" width="150" height="120">
+      <!-- body -->
+      <rect x="25" y="50" width="150" height="90" rx="16" fill="${hex}"/>
+      <!-- flap -->
+      <path d="M25 50 Q25 20 100 18 Q175 20 175 50 Z" fill="${dark}"/>
+      <!-- clasp -->
+      <circle cx="100" cy="52" r="10" fill="${light}" stroke="${dark}" stroke-width="2"/>
+      <circle cx="100" cy="52" r="5" fill="${dark}"/>
+      <!-- crochet -->
+      <g opacity="0.18" fill="${dark}">
+        ${[0,1,2].map(r=>[0,1,2,3,4,5].map(c=>`<circle cx="${42+c*22}" cy="${82+r*20}" r="4"/>`).join('')).join('')}
+      </g>
+    </svg>`;
+  } else { // Shoulder bag default
+    return `<svg viewBox="0 0 200 230" xmlns="http://www.w3.org/2000/svg" width="140" height="161">
+      <!-- strap -->
+      <path d="M75 65 Q50 30 60 15 Q75 5 90 15 Q105 25 100 65" fill="none" stroke="${dark}" stroke-width="7" stroke-linecap="round"/>
+      <!-- body -->
+      <rect x="35" y="65" width="130" height="145" rx="18" fill="${hex}"/>
+      <rect x="35" y="65" width="130" height="32" rx="18" fill="${dark}"/>
+      <!-- pocket -->
+      <rect x="58" y="130" width="84" height="60" rx="10" fill="${dark}" opacity="0.2"/>
+      <!-- zipper -->
+      <line x1="60" y1="155" x2="140" y2="155" stroke="${dark}" stroke-width="2" stroke-dasharray="6,4"/>
+      <circle cx="100" cy="155" r="5" fill="${light}" stroke="${dark}" stroke-width="1.5"/>
+      <!-- crochet -->
+      <g opacity="0.18" fill="${dark}">
+        ${[0,1,2].map(r=>[0,1,2,3,4].map(c=>`<circle cx="${55+c*22}" cy="${88+r*22}" r="4"/>`).join('')).join('')}
+      </g>
+    </svg>`;
+  }
+}
+
+function lightenHex(hex,amt){
+  let r=parseInt(hex.slice(1,3),16),g=parseInt(hex.slice(3,5),16),b=parseInt(hex.slice(5,7),16);
+  r=Math.min(255,Math.round(r+(255-r)*amt));
+  g=Math.min(255,Math.round(g+(255-g)*amt));
+  b=Math.min(255,Math.round(b+(255-b)*amt));
+  return `#${r.toString(16).padStart(2,'0')}${g.toString(16).padStart(2,'0')}${b.toString(16).padStart(2,'0')}`;
+}
+function darkenHex(hex,amt){
+  let r=parseInt(hex.slice(1,3),16),g=parseInt(hex.slice(3,5),16),b=parseInt(hex.slice(5,7),16);
+  r=Math.max(0,Math.round(r*(1-amt)));
+  g=Math.max(0,Math.round(g*(1-amt)));
+  b=Math.max(0,Math.round(b*(1-amt)));
+  return `#${r.toString(16).padStart(2,'0')}${g.toString(16).padStart(2,'0')}${b.toString(16).padStart(2,'0')}`;
+}
+
+function buildCard(p){
+  const state = cardState[p.id];
+  if(!state.activeColorIdx && state.activeColorIdx!==0) state.activeColorIdx=0;
+
+  const div=document.createElement('div');
+  div.className='pcard reveal';
+  div.id=`pcard-${p.id}`;
+
+  const images = p.images||['','',''];
+  const labels=['Front','Back','Side'];
+  const initColor = (p.colors[state.activeColorIdx]||p.colors[0]||{hex:'#C8955A'}).hex;
+
+  const slidesHTML = images.map((img,i)=>{
+    const hasImg = img && img.trim()!=='';
+    return `<div class="pimg-slide" id="slide-${p.id}-${i}" style="background:#F5ECD9">
+      ${hasImg
+        ? `<img src="${img}" alt="${p.name} ${labels[i]}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.remove()"/>`
+        : ``}
+      <div class="svg-bag-wrap" id="svgbag-${p.id}-${i}">${getBagSVG(p.emoji, initColor)}</div>
+      <div style="position:absolute;bottom:6px;left:50%;transform:translateX(-50%);font-size:.65rem;color:#9E7B6A;font-weight:600;letter-spacing:.5px;text-transform:uppercase;pointer-events:none">${labels[i]}</div>
+    </div>`;
+  }).join('');
+
+  const dotsHTML = images.map((_,i)=>`<button class="pimg-dot ${i===0?'active':''}" id="dot-${p.id}-${i}" onclick="goSlide(${p.id},${i})"></button>`).join('');
+
+  const badgeHTML = p.badge?`<div class="pcard-badge badge-${p.badge}">${p.badgeText}</div>`:'';
+
+  const colorSwatchesHTML = p.colors.map((c,i)=>{
+    const isActive = i===state.activeColorIdx;
+    return `<div class="pcolor-swatch ${isActive?'active':''}" 
+      style="background:${c.hex}" 
+      title="${c.name}"
+      data-color="${c.name==='White'?'white':''}"
+      onclick="selectColor(${p.id},${i})"></div>`;
+  }).join('');
+
+  const selectedColor = p.colors[state.activeColorIdx]||p.colors[0]||{name:''};
+
+  const priceHTML = p.oldPrice
+    ? `<span class="now">Rs ${p.price.toLocaleString()}</span><span class="was">Rs ${p.oldPrice.toLocaleString()}</span><span class="off">${Math.round((1-p.price/p.oldPrice)*100)}% OFF</span>`
+    : `<span class="now">Rs ${p.price.toLocaleString()}</span>`;
+
+  div.innerHTML=`
+    ${badgeHTML}
+    <div class="pimg-wrap" id="pimgwrap-${p.id}">
+      <div class="pimg-slides" id="slides-${p.id}" style="transform:translateX(0%)">${slidesHTML}</div>
+      <button class="pimg-arr left" onclick="goSlide(${p.id},${(state.slideIdx-1+3)%3})">‹</button>
+      <button class="pimg-arr right" onclick="goSlide(${p.id},${(state.slideIdx+1)%3})">›</button>
+      <div class="pimg-nav">${dotsHTML}</div>
+      <div class="pcolor-bar">${colorSwatchesHTML}</div>
+    </div>
+    <div class="pinfo">
+      <h3>${p.name}</h3>
+      <p class="pdesc">${p.desc}</p>
+      <div class="pprice">${priceHTML}</div>
+      <div class="pselected-color" id="pselcolor-${p.id}">Selected color: <span>${selectedColor.name}</span></div>
+      <button class="pbtn" onclick="openOrderModal(${p.id})">💬 Customize & Order</button>
+    </div>`;
+  return div;
+}
+
+function goSlide(pid,idx){
+  const state=cardState[pid];
+  state.slideIdx=idx;
+  const slides=document.getElementById(`slides-${pid}`);
+  if(slides) slides.style.transform=`translateX(-${idx*100}%)`;
+  [0,1,2].forEach(i=>{
+    const d=document.getElementById(`dot-${pid}-${i}`);
+    if(d) d.classList.toggle('active',i===idx);
+  });
+  // Update arrow onclick
+  const card=document.getElementById(`pcard-${pid}`);
+  if(card){
+    const arrows=card.querySelectorAll('.pimg-arr');
+    if(arrows[0]) arrows[0].setAttribute('onclick',`goSlide(${pid},${(idx-1+3)%3})`);
+    if(arrows[1]) arrows[1].setAttribute('onclick',`goSlide(${pid},${(idx+1)%3})`);
+  }
+}
+
+function selectColor(pid,colorIdx){
+  const p=store.products.find(x=>x.id===pid);
+  if(!p) return;
+  const state=cardState[pid];
+  state.activeColorIdx=colorIdx;
+  const selectedColor=p.colors[colorIdx];
+
+  // Update swatch active state
+  const card=document.getElementById(`pcard-${pid}`);
+  if(card){
+    card.querySelectorAll('.pcolor-swatch').forEach((s,i)=>s.classList.toggle('active',i===colorIdx));
+  }
+
+  // Update selected color text
+  const txt=document.getElementById(`pselcolor-${pid}`);
+  if(txt) txt.innerHTML=`Selected color: <span>${selectedColor.name}</span>`;
+
+  // Apply color tint to current slide image area
+  applyColorTint(pid, selectedColor.hex);
+}
+
+function applyColorTint(pid, hex){
+  const p = store.products.find(x=>x.id===pid);
+  if(!p) return;
+  [0,1,2].forEach(i=>{
+    const wrap = document.getElementById(`svgbag-${pid}-${i}`);
+    if(wrap){
+      const slide = document.getElementById(`slide-${pid}-${i}`);
+      const img = slide && slide.querySelector('img');
+      if(!img){ wrap.innerHTML = getBagSVG(p.emoji, hex); }
+    }
+  });
+}
+
+// ══════════════════════════════════════════
+// ORDER MODAL
+// ══════════════════════════════════════════
+let currentOrderProduct=null;
+
+function openOrderModal(pid){
+  const p=store.products.find(x=>x.id===pid);
+  if(!p) return;
+  currentOrderProduct=p;
+  const state=cardState[pid];
+  const selColor=p.colors[state.activeColorIdx||0]||p.colors[0]||{name:'',hex:'#C8955A'};
+
+  // Product summary
+  const thumb=document.getElementById('modalProductSummary');
+  const thumbImg = (p.images&&p.images[0]&&p.images[0].trim()!=='')
+    ?`<img src="${p.images[0]}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;border-radius:12px" onerror="this.outerHTML='<span style=font-size:2rem>${p.emoji}</span>'">`
+    :`<span style="font-size:2rem">${p.emoji}</span>`;
+  const priceStr=p.oldPrice
+    ?`Rs ${p.price.toLocaleString()} <small style="text-decoration:line-through;color:var(--light)">Rs ${p.oldPrice.toLocaleString()}</small>`
+    :`Rs ${p.price.toLocaleString()}`;
+  thumb.innerHTML=`<div class="thumb">${thumbImg}</div><div class="info"><h4>${p.name}</h4><p>Selected: <strong>${selColor.name}</strong></p><div class="price">${priceStr}</div></div>`;
+
+  // Color selection in modal
+  const colSec=document.getElementById('modalColorSection');
+  if(p.colors.length>0){
+    colSec.innerHTML=`<div style="margin-bottom:.8rem">
+      <label style="font-size:.82rem;font-weight:600;color:var(--brown);display:block;margin-bottom:.6rem">🎨 Choose Your Color</label>
+      <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+        ${p.colors.map((c,i)=>`
+          <div onclick="selectModalColor(${pid},${i},this)" 
+            style="display:flex;align-items:center;gap:.4rem;background:${i===(state.activeColorIdx||0)?'var(--sand)':'var(--sand2)'};
+            padding:.4rem .8rem;border-radius:50px;cursor:pointer;border:2px solid ${i===(state.activeColorIdx||0)?'var(--caramel)':'transparent'};transition:.2s;font-size:.8rem;color:var(--brown);font-weight:500">
+            <span style="width:16px;height:16px;border-radius:50%;background:${c.hex};border:1px solid rgba(0,0,0,.15);display:inline-block"></span>${c.name}
+          </div>`).join('')}
+      </div>
+    </div>`;
+  } else {
+    colSec.innerHTML='';
+  }
+
+  document.getElementById('oName').value='';
+  document.getElementById('oPhone').value='';
+  document.getElementById('oCity').value='';
+  document.getElementById('oNote').value='';
+  document.getElementById('oConfirm').checked=false;
+  document.getElementById('confirmBtn').disabled=true;
+
+  document.getElementById('orderOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+
+function selectModalColor(pid,idx,el){
+  const p=store.products.find(x=>x.id===pid);
+  if(!p) return;
+  cardState[pid].activeColorIdx=idx;
+  selectColor(pid,idx);
+  // Update modal pills
+  const colSec=document.getElementById('modalColorSection');
+  colSec.querySelectorAll('div>div').forEach((d,i)=>{
+    d.style.background=i===idx?'var(--sand)':'var(--sand2)';
+    d.style.borderColor=i===idx?'var(--caramel)':'transparent';
+  });
+  // Update summary
+  const selColor=p.colors[idx]||{name:''};
+  const sumInfo=document.querySelector('#modalProductSummary .info p');
+  if(sumInfo) sumInfo.innerHTML=`Selected: <strong>${selColor.name}</strong>`;
+}
+
+function closeOrderModal(){
+  document.getElementById('orderOverlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+function toggleConfirmBtn(){
+  const checked=document.getElementById('oConfirm').checked;
+  document.getElementById('confirmBtn').disabled=!checked;
+}
+
+function submitOrder(){
+  const p=currentOrderProduct;
+  if(!p) return;
+  const name=document.getElementById('oName').value.trim();
+  const phone=document.getElementById('oPhone').value.trim();
+  const city=document.getElementById('oCity').value.trim();
+  const note=document.getElementById('oNote').value.trim();
+  if(!name||!phone){showToast('Please fill in your name and WhatsApp number!');return;}
+  const state=cardState[p.id];
+  const selColor=p.colors[state.activeColorIdx||0]||{name:'Not specified'};
+  const wa=store.settings.whatsapp||'923001234567';
+  const msg=`*New Order — Hana Craft Co.*\n\n` +
+    `🛍️ *Product:* ${p.name}\n` +
+    `🎨 *Color:* ${selColor.name}\n` +
+    `💰 *Price:* Rs ${p.price.toLocaleString()}\n` +
+    `👤 *Name:* ${name}\n` +
+    `📱 *Phone:* ${phone}\n` +
+    `📍 *City:* ${city||'Not provided'}\n` +
+    `📝 *Notes:* ${note||'None'}\n\n` +
+    `💳 *Payment:* 30% advance (Rs ${Math.round(p.price*.3).toLocaleString()}) + 70% COD\n\n` +
+    `I have read and agreed to the payment terms. Please confirm my order!`;
+  openWA(msg);
+  closeOrderModal();
+  showToast('✅ Redirecting to WhatsApp...');
+}
+
+// ══════════════════════════════════════════
+// COLORS SHOWCASE
+// ══════════════════════════════════════════
+function renderColorSwatches(){
+  const wrap=document.getElementById('colorSwatches');
+  if(!wrap) return;
+  wrap.innerHTML=store.settings.globalColors.map(c=>`
+    <div class="swatch" style="background:${c.hex}">
+      <span>${c.name}</span>
+    </div>`).join('');
+}
+
+// ══════════════════════════════════════════
+// FOOTER & STATS
+// ══════════════════════════════════════════
+function updateFooterLinks(){
+  const ul=document.getElementById('footerBagLinks');
+  if(!ul) return;
+  ul.innerHTML=store.products.map(p=>`<li><a href="#shop">${p.name}</a></li>`).join('');
+}
+function updateHeroStats(){
+  const n=store.products.length;
+  const hs=document.getElementById('hero-styles');
+  const as=document.getElementById('about-styles');
+  if(hs) hs.textContent=n;
+  if(as) as.textContent=n;
+}
+function updateContactWA(){
+  const el=document.getElementById('contactWANum');
+  if(el){
+    const wa=store.settings.whatsapp||'923001234567';
+    el.textContent='+'+wa;
+  }
+}
+
+// ══════════════════════════════════════════
+// ADMIN
+// ══════════════════════════════════════════
+let editingProductId=null;
+let editingColors=[];
+
+function openAdmin(e){
+  if(e) e.preventDefault();
+  const pass=prompt('Enter admin password:');
+  if(pass==='hana2024'){
+    document.getElementById('admin-panel').classList.add('open');
+    document.body.style.overflow='hidden';
+    renderAdminProducts();
+    renderAdminSettings();
+  } else {
+    if(pass!==null) alert('Wrong password!');
+  }
+}
+function closeAdmin(){
+  document.getElementById('admin-panel').classList.remove('open');
+  document.body.style.overflow='';
+  renderProducts();
+  renderColorSwatches();
+  updateContactWA();
+}
+function switchTab(name,btn){
+  document.querySelectorAll('.admin-section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.atab').forEach(b=>b.classList.remove('active'));
+  document.getElementById('tab-'+name).classList.add('active');
+  btn.classList.add('active');
+}
+
+function renderAdminProducts(){
+  const list=document.getElementById('adminProductList');
+  list.innerHTML=store.products.map(p=>{
+    const thumb=(p.images&&p.images[0]&&p.images[0].trim()!=='')
+      ?`<img src="${p.images[0]}" style="width:100%;height:100%;object-fit:cover;border-radius:12px" onerror="this.outerHTML='<span style=font-size:1.8rem>${p.emoji}</span>'">`
+      :`<span style="font-size:1.8rem">${p.emoji}</span>`;
+    const price=p.oldPrice?`Rs ${p.price.toLocaleString()} <small style="text-decoration:line-through;color:var(--light)">Rs ${p.oldPrice.toLocaleString()}</small>`:`Rs ${p.price.toLocaleString()}`;
+    return `<div class="product-row">
+      <div class="pr-icon">${thumb}</div>
+      <div class="pr-info"><h4>${p.name}</h4><p>${p.colors.map(c=>c.name).join(', ')}</p></div>
+      <div class="pr-price">${price}</div>
+      <div class="pr-actions">
+        <button class="pr-btn edit" onclick="showEditForm(${p.id})">✏️ Edit</button>
+        <button class="pr-btn del" onclick="deleteProduct(${p.id})">🗑️ Delete</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function deleteProduct(pid){
+  if(!confirm('Delete this product? This cannot be undone.')) return;
+  store.products=store.products.filter(p=>p.id!==pid);
+  delete cardState[pid];
+  saveStore(store);
+  renderAdminProducts();
+  showToast('Product deleted!');
+}
+
+function showAddForm(){
+  editingProductId=null;
+  editingColors=[];
+  renderProductForm(null);
+}
+
+function showEditForm(pid){
+  const p=store.products.find(x=>x.id===pid);
+  if(!p) return;
+  editingProductId=pid;
+  editingColors=JSON.parse(JSON.stringify(p.colors));
+  renderProductForm(p);
+}
+
+function renderProductForm(p){
+  const wrap=document.getElementById('productFormWrap');
+  wrap.style.display='block';
+  const isEdit=!!p;
+  wrap.innerHTML=`
+    <div class="add-product-form">
+      <h3>${isEdit?'✏️ Edit':'➕ Add New'} Product</h3>
+      <div class="form-row">
+        <div class="admin-fg">
+          <label>Product Name *</label>
+          <input type="text" id="pf-name" value="${p?p.name:''}" placeholder="e.g. Crochet Tote Bag"/>
+        </div>
+        <div class="admin-fg">
+          <label>Emoji Icon</label>
+          <input type="text" id="pf-emoji" value="${p?p.emoji:'👜'}" placeholder="👜"/>
+        </div>
+      </div>
+      <div class="admin-fg">
+        <label>Description *</label>
+        <textarea id="pf-desc" placeholder="Brief description of the bag...">${p?p.desc:''}</textarea>
+      </div>
+      <div class="form-row">
+        <div class="admin-fg">
+          <label>Price (Rs) *</label>
+          <input type="number" id="pf-price" value="${p?p.price:''}" placeholder="2250"/>
+        </div>
+        <div class="admin-fg">
+          <label>Old Price (Rs) — leave blank if no discount</label>
+          <input type="number" id="pf-oldprice" value="${p&&p.oldPrice?p.oldPrice:''}" placeholder="2500"/>
+        </div>
+      </div>
+      <div class="admin-fg">
+        <label>Badge</label>
+        <select id="pf-badge">
+          <option value="" ${p&&p.badge===''?'selected':''}>None</option>
+          <option value="sale" ${p&&p.badge==='sale'?'selected':''}>Sale</option>
+          <option value="popular" ${p&&p.badge==='popular'?'selected':''}>Popular</option>
+          <option value="new" ${p&&p.badge==='new'?'selected':''}>New</option>
+        </select>
+      </div>
+      <div class="admin-fg">
+        <label>Badge Text (e.g. 10% OFF)</label>
+        <input type="text" id="pf-badgetext" value="${p?p.badgeText:''}" placeholder="10% OFF"/>
+      </div>
+      <div class="admin-fg">
+        <label>📷 Front Image URL</label>
+        <input type="url" id="pf-img0" value="${p&&p.images&&p.images[0]?p.images[0]:''}" placeholder="https://..."/>
+      </div>
+      <div class="admin-fg">
+        <label>📷 Back Image URL</label>
+        <input type="url" id="pf-img1" value="${p&&p.images&&p.images[1]?p.images[1]:''}" placeholder="https://..."/>
+      </div>
+      <div class="admin-fg">
+        <label>📷 Side Image URL</label>
+        <input type="url" id="pf-img2" value="${p&&p.images&&p.images[2]?p.images[2]:''}" placeholder="https://..."/>
+      </div>
+      <div class="admin-fg">
+        <label>🎨 Colors Available</label>
+        <div id="pf-colors-list"></div>
+        <div class="color-add-row">
+          <input type="color" id="pf-ccolor" value="#C4894A"/>
+          <input type="text" id="pf-cname" placeholder="Color name"/>
+          <button onclick="addProductColor()">+ Add Color</button>
+        </div>
+      </div>
+      <div style="margin-top:1.5rem">
+        <button class="btn-save" onclick="saveProductForm()">💾 Save Product</button>
+        <button class="btn-cancel-form" onclick="cancelForm()">Cancel</button>
+      </div>
+    </div>`;
+  renderFormColors();
+  wrap.scrollIntoView({behavior:'smooth'});
+}
+
+function renderFormColors(){
+  const list=document.getElementById('pf-colors-list');
+  if(!list) return;
+  list.innerHTML=`<div class="color-input-row">${editingColors.map((c,i)=>`
+    <div class="color-pill">
+      <span class="dot" style="background:${c.hex}"></span>
+      ${c.name}
+      <button class="rm" onclick="removeProductColor(${i})">×</button>
+    </div>`).join('')}</div>`;
+}
+
+function addProductColor(){
+  const hex=document.getElementById('pf-ccolor').value;
+  const name=document.getElementById('pf-cname').value.trim();
+  if(!name){showToast('Enter a color name!');return;}
+  editingColors.push({hex,name});
+  document.getElementById('pf-cname').value='';
+  renderFormColors();
+}
+
+function removeProductColor(idx){
+  editingColors.splice(idx,1);
+  renderFormColors();
+}
+
+function saveProductForm(){
+  const name=document.getElementById('pf-name').value.trim();
+  const desc=document.getElementById('pf-desc').value.trim();
+  const price=parseInt(document.getElementById('pf-price').value);
+  const oldPriceVal=document.getElementById('pf-oldprice').value.trim();
+  const oldPrice=oldPriceVal?parseInt(oldPriceVal):null;
+  const badge=document.getElementById('pf-badge').value;
+  const badgeText=document.getElementById('pf-badgetext').value.trim();
+  const emoji=document.getElementById('pf-emoji').value.trim()||'👜';
+  const img0=document.getElementById('pf-img0').value.trim();
+  const img1=document.getElementById('pf-img1').value.trim();
+  const img2=document.getElementById('pf-img2').value.trim();
+  if(!name||!desc||!price){showToast('Please fill in name, description and price!');return;}
+  const productData={
+    name,desc,price,oldPrice,badge,badgeText,emoji,
+    images:[img0,img1,img2],
+    colors:editingColors
+  };
+  if(editingProductId){
+    const idx=store.products.findIndex(p=>p.id===editingProductId);
+    if(idx>=0){
+      store.products[idx]={...store.products[idx],...productData};
+      delete cardState[editingProductId];
+    }
+  } else {
+    const newId=Date.now();
+    store.products.push({id:newId,...productData});
+  }
+  saveStore(store);
+  cancelForm();
+  renderAdminProducts();
+  showToast(editingProductId?'Product updated!':'Product added!');
+}
+
+function cancelForm(){
+  const wrap=document.getElementById('productFormWrap');
+  wrap.style.display='none';
+  wrap.innerHTML='';
+  editingProductId=null;
+  editingColors=[];
+}
+
+// ══════════════════════════════════════════
+// SETTINGS
+// ══════════════════════════════════════════
+function renderAdminSettings(){
+  document.getElementById('settingWA').value=store.settings.whatsapp||'';
+  renderGlobalColors();
+}
+function renderGlobalColors(){
+  const list=document.getElementById('globalColorsList');
+  if(!list) return;
+  list.innerHTML=`<div class="color-input-row" style="flex-wrap:wrap">${(store.settings.globalColors||[]).map((c,i)=>`
+    <div class="color-pill">
+      <span class="dot" style="background:${c.hex}"></span>
+      ${c.name}
+      <button class="rm" onclick="removeGlobalColor(${i})">×</button>
+    </div>`).join('')}</div>`;
+}
+function addGlobalColor(){
+  const hex=document.getElementById('gcColor').value;
+  const name=document.getElementById('gcName').value.trim();
+  if(!name){showToast('Enter color name!');return;}
+  if(!store.settings.globalColors) store.settings.globalColors=[];
+  store.settings.globalColors.push({hex,name});
+  document.getElementById('gcName').value='';
+  renderGlobalColors();
+  saveStore(store);
+}
+function removeGlobalColor(i){
+  store.settings.globalColors.splice(i,1);
+  renderGlobalColors();
+  saveStore(store);
+}
+function saveSettings(){
+  store.settings.whatsapp=document.getElementById('settingWA').value.trim()||'923001234567';
+  saveStore(store);
+  showToast('✅ Settings saved!');
+}
+
+// ══════════════════════════════════════════
+// UTILITIES
+// ══════════════════════════════════════════
+function openWA(msg){
+  const wa=store.settings.whatsapp||'923001234567';
+  window.open(`https://wa.me/${wa}?text=${encodeURIComponent(msg)}`,'_blank');
+  return false;
+}
+function showToast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg;
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),2800);
+}
+function toggleMenu(){
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+function closeMobileMenu(){
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+function toggleFaq(btn){
+  btn.parentElement.classList.toggle('open');
+}
+
+// Close overlay on background click
+document.getElementById('orderOverlay').addEventListener('click',function(e){
+  if(e.target===this) closeOrderModal();
+});
+
+// Scroll reveal
+const ro=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');ro.unobserve(e.target);}});
+},{threshold:.1});
+
+function observeReveal(){
+  document.querySelectorAll('.reveal:not(.vis)').forEach(el=>ro.observe(el));
+}
+
+// ══════════════════════════════════════════
+// INIT
+// ══════════════════════════════════════════
+window.addEventListener('DOMContentLoaded',()=>{
+  renderProducts();
+  renderColorSwatches();
+  updateContactWA();
+  setTimeout(observeReveal,100);
+});
+</script>
+</body>
+</html>
